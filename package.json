@@ -1,0 +1,25 @@
+{
+  "name": "mhennelly.com",
+  "version": "1.0.0",
+  "description": "Personal website of Mike Hennelly",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MHennelly/mhennelly.com.git"
+  },
+  "author": "Michael Hennelly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MHennelly/mhennelly.com/issues"
+  },
+  "homepage": "https://github.com/MHennelly/mhennelly.com#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,19 @@
+body {
+    background: khaki;
+}
+
+h1, p, a {
+    text-align: center;
+}
+
+#main {
+    background: palegoldenrod;
+    border-radius: 20 px;
+    box-shadow: 0 .5em 1em rgba(0,0,0,0.3);
+    margin-top: 10%;
+    padding: 2%;
+}
+
+.container-fluid {
+    height: 100vh;
+}
