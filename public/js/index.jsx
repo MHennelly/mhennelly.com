@@ -62,7 +62,7 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-    <App srcURL='https://mhennelly.com/me.jpg'/>,
+    <App srcURL='https://mhennelly.com/img/me.jpg'/>,
     document.getElementById('react-container')
 )
 
