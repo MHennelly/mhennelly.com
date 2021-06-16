@@ -68,7 +68,7 @@ class App extends React.Component {
 			</div>
 			<div class='col-8 my-auto'>
 			    <h1>Michael Hennelly</h1>
-			    <p>Web Dev | UCLA 2021 </p>
+			    <p>Software Engineer | UCLA 2021 </p>
 			    <p>mike@mhennelly.com</p>
 			    <p><a href='https://github.com/mhennelly'>GitHub</a></p>
 			    <p><a href='https://linkedin.com/in/mhennelly'>LinkedIn</a></p>
