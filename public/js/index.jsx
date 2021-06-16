@@ -7,9 +7,11 @@ class App extends React.Component {
 	this.state = {srcURL: props.srcURL,
 		      R: 100,
 		      G: 100,
-		      B: 100
+		      B: 100,
+		      isLoading: false
 		     }
 	this.handleChange = this.handleChange.bind(this)
+	this.handleImageLoad = this.handleImageLoad.bind(this)
     }
     
     handleChange(e) {
@@ -18,9 +20,15 @@ class App extends React.Component {
 	const value = target.type === 'checkbox' ? target.checked : target.value
 	const name = target.name
 	this.setState({
-	   [name]: value
+	    [name]: value,
+	    isLoading: true
 	})
-	console.log(this.state)
+    }
+
+    handleImageLoad() {
+	this.setState({
+	    isLoading: false
+	})
     }
     
     render() {
@@ -32,7 +40,11 @@ class App extends React.Component {
 		<div class='col-4 mx-auto' id='main'>
 		    <div class='row'>
 			<div class='col-4 my-auto'>
-			    <img class='img-fluid img-thumbnail' src={filterURL}/>
+			    <a href={filterURL}>
+				<img class='img-fluid img-thumbnail' src={filterURL}
+				     onLoad={this.handleImageLoad}
+				     onError={this.handleImageLoad} />
+			    </a>
 			    <form>
 				<div class='form-group'>
 				    <label for='R'>R:</label>
@@ -46,12 +58,19 @@ class App extends React.Component {
 					   min='0' max='100' step='10' name='B' id='B'/>
 				</div>
 			    </form>
-			    <a href='https://static.mhennelly.com'>static.mhennelly.com</a>
+			    {this.state.isLoading ?
+			     <div>
+				 <strong>Loading...</strong>
+				 <div class='spinner-border float-right text-primary spinner-border-sm'
+				      role='status' aria-hidden='true'></div>
+			     </div>
+			     : <a href='https://static.mhennelly.com'>static.mhennelly.com</a> }
 			</div>
 			<div class='col-8 my-auto'>
-			    <h1>Mike Hennelly</h1>
+			    <h1>Michael Hennelly</h1>
+			    <p>Web Dev | UCLA 2021 </p>
 			    <p>mike@mhennelly.com</p>
-			    <p><a href='https://github.com/mhennelly'>GitHub/MHennelly</a></p>
+			    <p><a href='https://github.com/mhennelly'>GitHub</a></p>
 			    <p><a href='https://linkedin.com/in/mhennelly'>LinkedIn</a></p>
 			</div>
 		    </div>
