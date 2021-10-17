@@ -5,8 +5,8 @@ class App extends React.Component {
     constructor(props) {
 	super(props)
 	this.state = {srcURL: props.srcURL,
-		      R: 100,
-		      G: 100,
+		      R: 70,
+		      G: 30,
 		      B: 100,
 		      isLoading: false
 		     }
@@ -49,13 +49,13 @@ class App extends React.Component {
 				<div class='form-group'>
 				    <label for='R'>R:</label>
 				    <input type='range' class='form-range' onChange={this.handleChange}
-					   min='0' max='100' step='10' name='R' id='R'/>
+					   min='0' max='100' step='10' value='30' name='R' id='R'/>
 				    <label for='G'>G:</label>
 				    <input type='range' class='form-range' onChange={this.handleChange}
-					   min='0' max='100' step='10' name='G' id='G'/>
+					   min='0' max='100' step='10' name='G' value='70' id='G'/>
 				    <label for='B'>B:</label>
 				    <input type='range' class='form-range' onChange={this.handleChange}
-					   min='0' max='100' step='10' name='B' id='B'/>
+					   min='0' max='100' step='10' name='B' value='100' id='B'/>
 				</div>
 			    </form>
 			    {this.state.isLoading ?
