@@ -49,13 +49,13 @@ class App extends React.Component {
 				<div class='form-group'>
 				    <label for='R'>R:</label>
 				    <input type='range' class='form-range' onChange={this.handleChange}
-					   min='0' max='100' step='10' value='30' name='R' id='R'/>
+					   min='0' max='100' step='10' value={this.state.R} name='R' id='R'/>
 				    <label for='G'>G:</label>
 				    <input type='range' class='form-range' onChange={this.handleChange}
-					   min='0' max='100' step='10' name='G' value='70' id='G'/>
+					   min='0' max='100' step='10' name='G' value={this.state.G} id='G'/>
 				    <label for='B'>B:</label>
 				    <input type='range' class='form-range' onChange={this.handleChange}
-					   min='0' max='100' step='10' name='B' value='100' id='B'/>
+					   min='0' max='100' step='10' name='B' value={this.state.B} id='B'/>
 				</div>
 			    </form>
 			    {this.state.isLoading ?
