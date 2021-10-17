@@ -5,8 +5,8 @@ class App extends React.Component {
     constructor(props) {
 	super(props)
 	this.state = {srcURL: props.srcURL,
-		      R: 70,
-		      G: 30,
+		      R: 20,
+		      G: 90,
 		      B: 100,
 		      isLoading: false
 		     }
