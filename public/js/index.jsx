@@ -5,7 +5,7 @@ class App extends React.Component {
     constructor(props) {
 	super(props)
 	this.state = {srcURL: props.srcURL,
-		      R: 20,
+		      R: 10,
 		      G: 90,
 		      B: 100,
 		      isLoading: false
@@ -34,14 +34,15 @@ class App extends React.Component {
     render() {
 	let filterURL = 'https://static.mhennelly.com/magick?src=' + this.state.srcURL +
 	    '&colorize=' + (100 - this.state.R) + ',' +
-	    (100 - this.state.G) + ',' + (100 - this.state.B)
+	    (100 - this.state.G) + ',' + (100 - this.state.B) +
+	    '&colors=12&lower=10,10'
 	return (
 	    <div class='container-fluid'>
-		<div class='col-4 mx-auto' id='main'>
+		<div class='col-lg-4 col-md-12 mx-auto' id='main'>
 		    <div class='row'>
 			<div class='col-4 my-auto'>
 			    <a href={filterURL}>
-				<img class='img-fluid img-thumbnail' src={filterURL}
+				<img class='img-fluid' src={filterURL}
 				     onLoad={this.handleImageLoad}
 				     onError={this.handleImageLoad} />
 			    </a>
@@ -68,7 +69,7 @@ class App extends React.Component {
 			</div>
 			<div class='col-8 my-auto'>
 			    <h1>Michael Hennelly</h1>
-			    <p>Software Engineer | UCLA 2021 </p>
+			    <p>Software Engineer @ Rivian </p>
 			    <p>mike@mhennelly.com</p>
 			    <p><a href='https://github.com/mhennelly'>GitHub</a></p>
 			    <p><a href='https://linkedin.com/in/mhennelly'>LinkedIn</a></p>
